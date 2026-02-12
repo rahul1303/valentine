@@ -219,6 +219,28 @@
             padding: 0 20px;
         }
 
+        .celebration-img {
+            max-width: 80%;
+            max-height: 40vh;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            margin: 20px 0;
+            border: 5px solid white;
+            animation: zoomIn 1s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
         @keyframes bounce {
 
             0%,
@@ -281,6 +303,8 @@
         <p>I knew you'd say yes! You've made me the happiest person alive! 💕</p>
         <p style="margin-top: 20px; font-size: 1.2em;">I love you so much! Happy Valentine's Day, my forever Valentine!
             ❤️</p>
+        <img src="https://rahul1303.github.io/valentine/yes.gif" alt="Our Love" class="celebration-img"
+            id="celebrationPic">
         <p style="margin-top: 20px; font-size: 1.3em; font-weight: 600;">Get ready, I'm coming to pick you up today
             and bring you back home! 🚗💕✨
         </p>
