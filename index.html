@@ -340,13 +340,13 @@
             "https://media.giphy.com/media/3oEjI1erPMTMBFmNHi/giphy.gif", // puppy eyes
             "https://media.giphy.com/media/L95W4wv8nnb9K/giphy.gif", // broken heart
             "https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif", // crying
-            "https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif", // romantic couple
+            "https://rahul1303.github.io/valentine/2.mp4", // Bali loop video
             "https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif", // crying more
-            "https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif", // playful threat
+            "https://rahul1303.github.io/valentine/3.mp4", // playful threat
             "https://media.giphy.com/media/3o7ZetIsjtbkgNE1I4/giphy.gif", // walking/exercise
             "https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif", // travel/vacation
             "https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif", // tea/chai
-            "https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif", // romantic promise
+            "https://rahul1303.github.io/valentine/1.mp4", // Brownie promise video
             "https://media.giphy.com/media/3oEjHV0z8S7WM4MwnK/giphy.gif", // love heart
             "https://media.giphy.com/media/3o7qDQ4kcSD1PLM3BK/giphy.gif", // everything
             "https://media.giphy.com/media/3o6UB5RrlQuMfZp82Y/giphy.gif", // can't live without you
@@ -369,9 +369,14 @@
                 message.textContent = messages[noClickCount - 1];
                 message.style.transform = 'scale(1.1)';
 
-                // Show GIF
+                // Show GIF or Video
                 const gifContainer = document.getElementById('gifContainer');
-                gifContainer.innerHTML = `<img src="${gifs[noClickCount - 1]}" style="max-width: 100%; max-height: 200px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" alt="Romantic GIF">`;
+                const mediaUrl = gifs[noClickCount - 1];
+                if (mediaUrl.endsWith('.mp4')) {
+                    gifContainer.innerHTML = `<video src="${mediaUrl}" autoplay loop muted playsinline style="max-width: 100%; max-height: 200px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></video>`;
+                } else {
+                    gifContainer.innerHTML = `<img src="${mediaUrl}" style="max-width: 100%; max-height: 200px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" alt="Romantic GIF">`;
+                }
 
                 setTimeout(() => {
                     message.style.transform = 'scale(1)';
